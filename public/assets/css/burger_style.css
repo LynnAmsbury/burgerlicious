@@ -1,0 +1,16 @@
+body{
+    background-image: url(../images/burgers_background.jpeg);
+}
+
+#main {
+    text-align: center;
+}
+
+#eat, #ate {
+    display: inline-block;
+    width: 40%;
+}
+
+li {
+    list-style-type: none;
+}

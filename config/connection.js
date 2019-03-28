@@ -4,7 +4,8 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "Sk8!Park",
+  // password: "Sk8!Park",
+  password: process.env.DB_PASS,
   database: "burgerlicious_db"
 });
 
