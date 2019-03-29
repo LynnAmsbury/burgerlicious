@@ -8,13 +8,6 @@ var burger = require("../models/burger.js");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   res.redirect("/burgers");
-  // burger.all(function(data) {
-  //   var hbsObject = {
-  //     burgers: data
-  //   };
-  //   console.log(hbsObject);
-  //   res.render("index", hbsObject);
-  // });
 });
 
 router.get("/burgers",function (req, res) {
@@ -29,7 +22,7 @@ router.post("/burgers/update", function(req, res) {
   var updateDevoured = req.body.devoured;
   console.log("SET " + updateId + " to " + updateDevoured);
   // An example of objColVals would be {name: panther, sleepy: true}
-  // update: function(objColVals, condition, cb) {
+  // Update: function(objColVals, condition, cb)
   var objColVals = {devoured: updateDevoured};
   var idMatch = "id=" + updateId;
   burger.update(objColVals, idMatch, function(result) {
@@ -50,16 +43,6 @@ router.post("/burgers/create", function(req, res) {
     res.redirect("/");
   });
 });
-
-  // burger.create([
-  //   "burger_name", "devoured"
-  // ], [
-//     req.body.name, req.body.devoured
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;

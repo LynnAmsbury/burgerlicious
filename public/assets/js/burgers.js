@@ -3,7 +3,7 @@ $(function() {
     $(".change-devoured").on("click", function(event) {
       var devourId = $(this).data("id");
       console.log("DEVOUR ID: " + devourId);
-      //find out whether it's devoured (it's not) and invert it
+      //Find out whether it's devoured (it's not) and invert it
       var newDevoured = $(this).attr("data-newDevoured");
       if(newDevoured == "false") { //false should change to 1 (true)
         newDevoured = 1;
