@@ -9,16 +9,18 @@ This burger app logs burgers users add via a form and button on the page. When t
 Model-View-Controller design pattern
 
 **Model/Controller:** Node, Express, MySQL
-**View:** Handlebars, CSS, jQuery
+**View:** Handlebars, CSS, jQuery, Google Fonts
 
 ## Instructions
 
 Navigate to the app's [homepage](https://herokuapp.com/).
 
-![Burger homepage](./images/main.png)
+![Burger homepage](public/assets/images/burgerlicious_homepage.png)
 
-Add a burger using the form:
+Add a burger using the form and click the "Add burger" button. Add as many burgers as desired:
 
-Click the "Add burger" button. Add as many burgers as desired.
+![Page showing added burgers](public/assets/images/adding_burgers.png)
 
-Click on the "DEVOUR THE BURGER" button beside any of the burgers to devour that burger.
+Click on the "DEVOUR THE BURGER" button beside any of the burgers to devour that burger:
+
+![Page showing devoured burgers](public/assets/images/devoured_burgers.png)
