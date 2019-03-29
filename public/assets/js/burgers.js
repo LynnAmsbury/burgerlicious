@@ -1,16 +1,27 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".change-devoured").on("click", function(event) {
-      var id = $(this).data("id");
+      var devourId = $(this).data("id");
+      console.log("DEVOUR ID: " + devourId);
+      //find out whether it's devoured (it's not) and invert it
       var newDevoured = $(this).attr("data-newDevoured");
-      console.log({newDevoured});
+      if(newDevoured == "false") { //false should change to 1 (true)
+        newDevoured = 1;
+      }
+      else if(newDevoured == "true") { //true would change to 0 (false)
+        newDevoured = 0;
+      }
+      console.log(newDevoured);
+
       var newDevouredState = {
+        id: devourId,
         devoured: newDevoured
       };
+      console.log(newDevouredState);
   
-      // Send the PUT request.
-      $.ajax("/api/burgers/" + id, {
-        type: "PUT",
+      // Send the POST request.
+      $.ajax("/burgers/update", {
+        type: "POST",
         data: newDevouredState
       }).then(
         function() {
@@ -23,15 +34,17 @@ $(function() {
   
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
+      console.log("CREATE");
       event.preventDefault();
   
       var newBurger = {
-        name: $("#burger").val().trim(),
-        devoured: 1
+        burger_name: $("#burger").val().trim(),
+        devoured: 0
       };
+      console.log(newBurger);
   
       // Send the POST request.
-      $.ajax("/api/burgers", {
+      $.ajax("/burgers/create", {
         type: "POST",
         data: newBurger
       }).then(

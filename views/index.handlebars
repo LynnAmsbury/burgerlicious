@@ -2,7 +2,7 @@
   <h1>Burgers!</h1>
 
   <div id='add'>
-    <h2>Add a Burger</h2>
+    <h2>Add a Burger to Eat!</h2>
     <form class="create-form">
       <div class="form-group">
         <label for="burger">Burger Name:</label>
@@ -13,24 +13,27 @@
   </div>
 
   <div id='eat'>
-    <h2>Eat These Burgers!</h2>
+    <h2>I'm Starving!</h2>
+    <h2>I'm Gonna Eat These Burgers!</h2>
     <ul>
       {{#each burgers}}
-      {{#if devoured}}
+      {{#unless devoured}}
       {{> burger/burger-block devoured=false}}
-      {{/if}}
+      {{/unless}}
       {{/each}}
     </ul>
   </div>
   
   
   <div id='ate'>
-    <h2>Ate These Burgers!</h2>
+    <h2>I'm Stuffed.</h2>
+    <h2>I Ate All These Burgers</h2>
+    <h2>I'm a Pig.</h2>
     <ul>
       {{#each burgers}}
-      {{#unless devoured}}
+      {{#if devoured}}
       {{> burger/burger-block devoured=true}}
-      {{/unless}}
+      {{/if}}
       {{/each}}
     </ul>
   </div>

@@ -9,7 +9,13 @@ var burger = {
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
+    console.log("ORM creating a burger");
+    console.log(cols);
+    console.log(vals);
+    console.log(cb);
     orm.create("burgers", cols, vals, function(res) {
+      console.log("ORM successfully inserted burger");
+      console.log(res);
       cb(res);
     });
   },
