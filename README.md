@@ -25,4 +25,4 @@ Click on the "DEVOUR THE BURGER" button beside any of the burgers to devour that
 
 ![Page showing devoured burgers](public/assets/images/devoured_burgers.png)
 
-Yummy!
+Yummy Yummy!
