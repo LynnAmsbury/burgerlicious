@@ -24,3 +24,5 @@ Add a burger using the form and click the "Add burger" button. Add as many burge
 Click on the "DEVOUR THE BURGER" button beside any of the burgers to devour that burger:
 
 ![Page showing devoured burgers](public/assets/images/devoured_burgers.png)
+
+Yummy!
