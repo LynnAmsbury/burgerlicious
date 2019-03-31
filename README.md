@@ -13,7 +13,7 @@ Model-View-Controller design pattern
 
 ## Instructions
 
-Navigate to the app's [homepage](https://herokuapp.com/).
+Navigate to the app's [homepage](https://burgerlicious-yum.herokuapp.com/burgers).
 
 ![Burger homepage](public/assets/images/burgerlicious_homepage.png)
 
